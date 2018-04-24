@@ -170,6 +170,9 @@ bot.on('message', async message => { //Quand une personne envoi un message
                         message.react(EmojiGreenTick)
                         return message.reply(EmojiGreenTickString + " Et voilà, tu as le rôle Français ! :wink:")
                     }
+                    if (!Mess_Member.roles.has("412264669252943895")) {
+                        Mess_Member.addRole("412264669252943895")
+                    }
                     //console.log(Mess_Member.roles);
 
                 }
@@ -183,6 +186,9 @@ bot.on('message', async message => { //Quand une personne envoi un message
                         Mess_Member.addRole("426622564664606731")
                         message.react(EmojiGreenTick)
                         return message.reply(EmojiGreenTickString + " Enjoy the English role :wink:")
+                    }
+                    if (!Mess_Member.roles.has("412264669252943895")) {
+                        Mess_Member.addRole("412264669252943895")
                     }
                     //console.log(Mess_Member.roles);
 
@@ -204,6 +210,9 @@ bot.on('message', async message => { //Quand une personne envoi un message
                         Mess_Member.removeRole("426622371856777216")
                         message.react(EmojiGreenTick)
                         return message.reply(EmojiGreenTickString + " Et voilà, tu n'as plus le rôle ! :wink:")
+                        if (!Mess_Member.roles.has("426622564664606731")) {
+                            Mess_Member.removeRole("412264669252943895")
+                        }
                     }
                     //console.log(Mess_Member.roles);
 
@@ -216,7 +225,10 @@ bot.on('message', async message => { //Quand une personne envoi un message
                     } else {
                         Mess_Member.removeRole("426622564664606731")
                         message.react(EmojiGreenTick)
-                        return message.reply(EmojiGreenTickString + " And it's done, i removed you the English role ! :wink:")
+                        return message.reply(EmojiGreenTickString + " It's done, i removed you the English role ! :wink:")
+                        if (!Mess_Member.roles.has("426622371856777216")) {
+                            Mess_Member.removeRole("412264669252943895")
+                        }
                     }
                     //console.log(Mess_Member.roles);
 
